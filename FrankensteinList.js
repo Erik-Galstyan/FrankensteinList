@@ -114,6 +114,9 @@ class FrankensteinList {
   }
 
   removeById(index) {
+    if (typeof index != "number" || Number.isNaN(index)) {
+      throw new Error("The passed argument must be a number type with a non-NaN value.");
+    }
     if (index < 0 || index > this.size() - 1 || this.head == null) {
       return;
     }    
@@ -327,6 +330,10 @@ class FrankensteinList {
   }
 
   insert (value, index) {
+    if (typeof index != "number" || Number.isNaN(index)) {
+      throw new Error("The passed argument must be a number type with a non-NaN value.");
+    }
+
     if (index < 0 || index > this.size()) {
       return;
     }
@@ -374,47 +381,10 @@ class FrankensteinList {
 
 let obj = new FrankensteinList();
 obj.append(1);
-obj.append(2);
-obj.append(0);
-obj.append(2);
-obj.append(3);
-obj.append(-1);
-obj.preppend(-2);
-obj.preppend(10)
-obj.removeByValue(10)
-// console.log(obj.searchByNext(0));
-// console.log(obj.searchByPrev(0));
-// console.log(obj.searchByAscOrder(0));
-// console.log(obj.searchByDescOrder(0));
-obj.insert(11, );
+obj.removeById(8);
+
 console.log(obj.toString());
 
-obj.reverse();
-
-console.log(obj.toString() );
-
-// obj.removeByValue(0)
-// obj.removeByValue(3)
-// obj.removeByValue(1)
-// obj.removeByValue(-1)
-// obj.removeByValue(0)
-// obj.removeByValue(0)
-// obj.removeByValue(0)
-// obj.removeByValue(2)
-// obj.removeByValue(2)
-// obj.removeByValue(-2)
-
-console.log(obj.isEmpty());
-
-
-
-
-
-console.log(obj.size());
-
-
-console.log(obj.toStringByAscOrder());
-console.log(obj.toStringByDescOrder());
 
 
 

@@ -136,6 +136,7 @@ class FrankensteinList {
     } else if (index == this.size() - 1) {
       delVal = this.tail.value;
       this.tail.prev.next = null;
+      this.tail = this.tail.prev;
     } else {
       let tmp = this.head;
       let i = 0;
@@ -185,6 +186,7 @@ class FrankensteinList {
       if (flag) {
         return;
       }
+      
       tmp.prev.next = tmp.next;
       tmp.next.prev = tmp.prev;
     }
@@ -390,9 +392,23 @@ obj.append(1);
 obj.append(1);
 obj.preppend(-4);
 obj.preppend(-4);
-obj.insert(8, 3)
-obj.insert(8, 3)
+obj.insert(8, 3);
+obj.insert(8, 3);
+obj.removeById(0);
+obj.removeById(8);
+obj.removeById(obj.size() - 1);
+obj.removeByValue(8)
+obj.removeByValue(8)
+obj.removeByValue(9)
+obj.removeByValue(7)
+obj.removeByValue(-4)
+obj.removeByValue(2)
+obj.removeByValue(1)
+obj.removeByValue(-3)
+
+
 console.log(obj.toString());
 console.log(obj.toStringByAscOrder());
 console.log(obj.toStringByDescOrder());
+
 

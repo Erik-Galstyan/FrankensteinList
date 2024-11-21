@@ -29,8 +29,9 @@ class FrankensteinList {
         tmpAsc = tmpAsc.greater;
       }
       newNode.greater = tmpAsc;
+      newNode.lesser = tmpAsc.lesser;
+      tmpAsc.lesser.greater = newNode;
       tmpAsc.lesser = newNode;
-      tmpAsc = newNode;
     }
   }
 
@@ -381,10 +382,17 @@ class FrankensteinList {
 
 let obj = new FrankensteinList();
 obj.append(1);
-obj.removeById(8);
-
+obj.append(2);
+obj.append(-3);
+obj.append(7);
+obj.append(9);
+obj.append(1);
+obj.append(1);
+obj.preppend(-4);
+obj.preppend(-4);
+obj.insert(8, 3)
+obj.insert(8, 3)
 console.log(obj.toString());
-
-
-
+console.log(obj.toStringByAscOrder());
+console.log(obj.toStringByDescOrder());
 

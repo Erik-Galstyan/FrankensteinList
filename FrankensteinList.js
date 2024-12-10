@@ -1,10 +1,10 @@
 class Node {
   constructor (value) {
     this.value = value;
-    let next = null;
-    let prev = null;
-    let greater = null;
-    let lesser = null;
+    this.next = null;
+    this.prev = null;
+    this.greater = null;
+    this.lesser = null;
   }
 }
 

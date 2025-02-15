@@ -8,7 +8,7 @@ class Node {
   }
 }
 
-class FrankensteinList {
+export default class FrankensteinList {
   head = null;
   tail = null;
   asc_head_ = null;
@@ -381,34 +381,34 @@ class FrankensteinList {
     return false;
   }
 }
+// Use Example
+// let obj = new FrankensteinList();
+// obj.append(1);
+// obj.append(2);
+// obj.append(-3);
+// obj.append(7);
+// obj.append(9);
+// obj.append(1);
+// obj.append(1);
+// obj.preppend(-4);
+// obj.preppend(-4);
+// obj.insert(8, 3);
+// obj.insert(8, 3);
+// obj.removeById(0);
+// obj.removeById(8);
+// obj.removeById(obj.size() - 1);
+// obj.removeByValue(8)
+// obj.removeByValue(8)
+// obj.removeByValue(9)
+// obj.removeByValue(7)
+// obj.removeByValue(-4)
+// obj.removeByValue(2)
+// obj.removeByValue(1)
+// obj.removeByValue(-3)
 
-let obj = new FrankensteinList();
-obj.append(1);
-obj.append(2);
-obj.append(-3);
-obj.append(7);
-obj.append(9);
-obj.append(1);
-obj.append(1);
-obj.preppend(-4);
-obj.preppend(-4);
-obj.insert(8, 3);
-obj.insert(8, 3);
-obj.removeById(0);
-obj.removeById(8);
-obj.removeById(obj.size() - 1);
-obj.removeByValue(8)
-obj.removeByValue(8)
-obj.removeByValue(9)
-obj.removeByValue(7)
-obj.removeByValue(-4)
-obj.removeByValue(2)
-obj.removeByValue(1)
-obj.removeByValue(-3)
 
-
-console.log(obj.toString());
-console.log(obj.toStringByAscOrder());
-console.log(obj.toStringByDescOrder());
+// console.log(obj.toString());
+// console.log(obj.toStringByAscOrder());
+// console.log(obj.toStringByDescOrder());
 
 
